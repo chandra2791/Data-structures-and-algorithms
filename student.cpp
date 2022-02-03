@@ -13,6 +13,13 @@ class Student {
     Student (){
         cout << "Constructor called"<< endl;
     };
+    //parameterized constructor
+    Student(int a, int r){
+        cout <<"Parameterized constructor demo."<<endl;
+        cout <<"Constructor 3 called"<<endl;
+        age =a;
+        rollNumber = r;
+    }
     
 
     void display(){
