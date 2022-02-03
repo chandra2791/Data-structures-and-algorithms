@@ -21,7 +21,9 @@ class Student {
         rollNumber = r;
     }
     
-
+    ~Student(){
+        cout <<"Destructor called!"<<endl;
+    }
     void display(){
         cout << age <<" "<<rollNumber<<endl;
     }
