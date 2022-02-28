@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class Fraction {
@@ -15,7 +15,7 @@ class Fraction {
         cout<<this->numerator<<"/"<<denominator<<endl;
     }
 
-    void add(Fraction const &f2){
+     int add(Fraction const &f2){
         int lcm = this->denominator * f2.denominator;
         int x=lcm/this->denominator;
         int y= lcm/f2.denominator;
@@ -25,7 +25,28 @@ class Fraction {
         this->numerator=num;
         this->denominator=lcm;
 
-        simplify();
+        Fraction fnew(num,lcm);
+        
+        fnew.simplify();
+
+        return fnew;
+    }
+
+    int add(Fraction const &f2){
+        int lcm = this->denominator * f2.denominator;
+        int x=lcm/this->denominator;
+        int y= lcm/f2.denominator;
+        int num = x*this->numerator+y*f2.numerator;
+
+        //store result in f1
+        this->numerator=num;
+        this->denominator=lcm;
+
+        Fraction fnew(num,lcm);
+        
+        fnew.simplify();
+
+        return fnew;
     }
     void multiply(Fraction const &f2){
         numerator = numerator * f2.numerator;
@@ -52,7 +73,7 @@ int main(){
 
     Fraction f1(10,2);
     Fraction f2(15,4);
-
+    Fraction f3 = f1.add(f2);
     f1.add(f2);
     f1.print();
     f2.print();

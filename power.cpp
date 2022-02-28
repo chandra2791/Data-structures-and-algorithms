@@ -16,6 +16,6 @@ return x * smalloutput;
 }
 int main (){
 
-cout <<power(5,3);
+cout<<power(5,3);
 return 0;
 }

@@ -24,8 +24,8 @@ return a[n-1]+sumOfArrary2(a,n-1);
 int main(){
 
 int a[] = {1,2,3,4,5};
-cout << sumOfArrary(a,5)<<endl;
-cout << sumOfArrary2(a,5);
+cout<< sumOfArrary(a,5)<<endl;
+cout<< sumOfArrary2(a,5);
 return 0;
 }
 

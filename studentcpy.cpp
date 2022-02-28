@@ -17,6 +17,7 @@ class Student{
 
 int main(){
 
+    //If we copy the address of the array then it is called shallow copy.
     char name[]="Chandrakanth Saravanan";
     Student s1(20,name);
     s1.display();
